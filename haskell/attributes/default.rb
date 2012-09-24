@@ -1,0 +1,6 @@
+set_unless[:haskell][:ghc_version] = "7.4.1"
+set_unless[:haskell][:ghc_base_url] = "http://haskell.org/ghc/dist/"
+set_unless[:haskell][:platform_version] = "2012.2.0.0"
+set_unless[:haskell][:platform_base_url] = "http://lambda.haskell.org/platform/download/"
+set_unless[:haskell][:cabal_user] = "vagrant"
+set_unless[:haskell][:cabal_user_home] = "/home/#{node[:haskell][:cabal_user]}"

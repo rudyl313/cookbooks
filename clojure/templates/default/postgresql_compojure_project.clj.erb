@@ -1,0 +1,9 @@
+(defproject <%= @node[:clojure][:project_name] %> "0.0.1"
+:description "<%= @node[:clojure][:project_description] %>"
+  :dependencies [[org.clojure/clojure "<%= @node[:clojure][:version] %>"]
+                 [postgresql/postgresql "<%= @node[:clojure][:postgresql_driver_version] %>"]
+                 [org.clojure/java.jdbc "<%= @node[:clojure][:jdbc_version] %>"]
+                 [ring/ring-jetty-adapter "<%= @node[:clojure][:ring_jetty_adapter_version] %>"]
+                 [compojure "<%= @node[:clojure][:compojure_version] %>"]
+                 [hiccup "<%= @node[:clojure][:hiccup_version] %>"]]
+  :repositories {"sonatype-oss-public" "https://oss.sonatype.org/content/groups/public/"})

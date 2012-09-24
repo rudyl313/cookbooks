@@ -1,0 +1,8 @@
+required.packages <- c(<%= node[:R][:packages].map(&:inspect).join(",") %>);
+already.installed.packages <- as.vector(installed.packages()[,1]);
+
+for (package in required.packages) {
+  if (!package %in% already.installed.packages) {
+    install.packages(package, repos="<%= node[:R][:cran_mirror] %>");
+  }
+}
