@@ -1,4 +1,4 @@
-require_recipe "apt"
+include_recipe "apt"
 
 package "vim"
 package "htop"

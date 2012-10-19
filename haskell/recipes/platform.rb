@@ -5,9 +5,9 @@ base_url = node[:haskell][:platform_base_url]
 # Basic Software Requirements
 #-------------------------------------------------------------------------------
 
-require_recipe "apt"
-require_recipe "build-essential"
-require_recipe "haskell::ghc"
+include_recipe "apt"
+include_recipe "build-essential"
+include_recipe "haskell::ghc"
 
 #-------------------------------------------------------------------------------
 # Packages

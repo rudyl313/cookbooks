@@ -1,5 +1,5 @@
-require_recipe "apt"
-require_recipe "haskell::platform"
+include_recipe "apt"
+include_recipe "haskell::platform"
 
 package "sqlite3"
 package "libsqlite3-dev"

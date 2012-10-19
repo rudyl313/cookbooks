@@ -1,8 +1,8 @@
 version = node[:haskell][:ghc_version]
 base_url = node[:haskell][:ghc_base_url]
 
-require_recipe "apt"
-require_recipe "build-essential"
+include_recipe "apt"
+include_recipe "build-essential"
 
 package "libgmp3-dev"
 

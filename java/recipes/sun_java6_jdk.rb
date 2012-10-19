@@ -1,4 +1,4 @@
-require_recipe "apt"
+include_recipe "apt"
 
 source_file = "/etc/apt/sources.list"
 new_sources = [ "deb http://archive.canonical.com/ubuntu lucid partner",

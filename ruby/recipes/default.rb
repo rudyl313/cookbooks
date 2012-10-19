@@ -1,5 +1,5 @@
-require_recipe "apt"
-require_recipe "build-essential"
+include_recipe "apt"
+include_recipe "build-essential"
 
 package "curl"
 package "libyaml-dev"

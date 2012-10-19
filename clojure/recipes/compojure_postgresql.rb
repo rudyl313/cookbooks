@@ -1,5 +1,5 @@
-require_recipe "clojure::lein"
-require_recipe "postgresql::server"
+include_recipe "clojure::lein"
+include_recipe "postgresql::server"
 
 bash "change-cluster-encoding-to-utf8" do
   code <<-CODE
