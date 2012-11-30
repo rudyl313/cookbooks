@@ -21,17 +21,21 @@ package "r-base-dev" do
   options "--force-yes"
 end
 
-template "/tmp/packages.R" do
-  source "packages.R.erb"
-  mode "755"
-  owner "root"
-  group "root"
-end
+if node[:R][:packages].empty?
 
-bash "install packages" do
-  user "root"
-  group "root"
-  cwd "/tmp"
-  environment({'USER' => 'root', 'HOME' => '/root'})
-  code "R --vanilla < packages.R"
+  template "/tmp/packages.R" do
+    source "packages.R.erb"
+    mode "755"
+    owner "root"
+    group "root"
+  end
+
+  bash "install packages" do
+    user "root"
+    group "root"
+    cwd "/tmp"
+    environment({'USER' => 'root', 'HOME' => '/root'})
+    code "R --vanilla < packages.R"
+  end
+
 end

@@ -1,4 +1,4 @@
-include_recipe "R"
+require_recipe "R"
 
 user "rstudio" do
   comment "Application execution user"
