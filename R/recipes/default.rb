@@ -21,7 +21,7 @@ package "r-base-dev" do
   options "--force-yes"
 end
 
-if node[:R][:packages].empty?
+unless node[:R][:packages].empty?
 
   template "/tmp/packages.R" do
     source "packages.R.erb"
