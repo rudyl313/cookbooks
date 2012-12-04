@@ -1,8 +1,9 @@
 include_recipe "apt"
-include_recipe "build-essential"
 
+package "build-essential"
 package "curl"
 package "libyaml-dev"
+package "libxml2-dev"
 
 bash "install ruby via rvm" do
   user node[:ruby][:user]
