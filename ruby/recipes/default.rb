@@ -6,10 +6,10 @@ package "libyaml-dev"
 package "libxml2-dev"
 
 bash "install ruby via rvm" do
-  user node[:ruby][:user]
   code <<-CODE
 curl -L get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
+. /etc/profile
 rvm install #{node[:ruby][:version]}
 rvm use #{node[:ruby][:version]} --default
 CODE
